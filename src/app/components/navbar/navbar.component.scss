@@ -1,0 +1,13 @@
+@use "../../../styles.scss" as *;
+
+.navbar-brand {
+  color: $neonGreen;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+}
+
+.nav-link {
+  color: $neonGreen;
+}
