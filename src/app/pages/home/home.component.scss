@@ -1,0 +1,25 @@
+@use "../../../styles.scss" as *;
+
+.header {
+  max-width: 31.25rem;
+  color: $neonGreen;
+  background-color: $spaceBlue;
+}
+
+.hCont .row {
+  background-color: $spaceBlue;
+  padding: 5rem 1rem;
+}
+
+.about {
+  //   background-color: $neonGreen;
+}
+
+.about h3 {
+  color: #fe4a49;
+}
+
+.about p {
+  //   background-color: $neonGreen;
+  color: $mintCream;
+}
