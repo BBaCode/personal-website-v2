@@ -1,25 +1,54 @@
 @use "../../../styles.scss" as *;
 
+.container-fluid {
+  padding: 0 !important;
+}
+
 .header {
   max-width: 31.25rem;
   color: $neonGreen;
-  background-color: $spaceBlue;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
 }
 
-.hCont .row {
-  background-color: $spaceBlue;
-  padding: 5rem 1rem;
+.card {
+  border: 2px solid $neonGreen;
 }
 
-.about {
-  //   background-color: $neonGreen;
+.card-img-top {
+  height: 18.75rem;
 }
 
-.about h3 {
-  color: #fe4a49;
+.btn-primary {
+  background-color: $neonGreen;
+  border: black;
+  color: black;
+
+  &:hover {
+    background-color: black;
+    color: $neonGreen;
+  }
+
+  &:active {
+    background-color: black;
+    color: $neonGreen;
+  }
 }
 
-.about p {
-  //   background-color: $neonGreen;
-  color: $mintCream;
+.heroImage {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+
+.work {
+  border-top: 2px solid white;
+}
+
+.projectTitle {
+  color: $neonGreen;
+}
+
+.github {
+  max-width: 2rem;
 }

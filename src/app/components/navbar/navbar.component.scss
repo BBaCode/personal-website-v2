@@ -1,13 +1,15 @@
 @use "../../../styles.scss" as *;
 
-.navbar-brand {
-  color: $neonGreen;
-}
-
-.navbar-toggler-icon {
-  background-image: none;
-}
-
 .nav-link {
   color: $neonGreen;
+  margin: 0 8px;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-color: $neonGreen;
+  }
+}
+
+.work {
+  width: 1.5em;
 }
