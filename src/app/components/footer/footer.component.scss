@@ -1,0 +1,16 @@
+@use "../../../styles.scss" as *;
+
+.container-fluid {
+  background: black;
+}
+
+.pt-5 {
+  border-top: 2px solid white;
+}
+
+.icon {
+  background-color: $neonGreen;
+  width: 3rem;
+  border-radius: 50%;
+  border: 2px solid $neonGreen;
+}

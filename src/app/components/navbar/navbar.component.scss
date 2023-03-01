@@ -1,5 +1,9 @@
 @use "../../../styles.scss" as *;
 
+.navbar {
+  z-index: 10;
+}
+
 .nav-link {
   color: $neonGreen;
   margin: 0 8px;

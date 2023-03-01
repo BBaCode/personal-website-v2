@@ -12,7 +12,14 @@
 }
 
 .card {
-  border: 2px solid $neonGreen;
+  border: 2px solid white;
+  transition: all 800ms linear;
+
+  &:hover {
+    border: 2px solid $neonGreen;
+    box-shadow: 5px 2.5px 2.5px rgb(27, 112, 27);
+    transform: scale(1.05);
+  }
 }
 
 .card-img-top {
@@ -23,15 +30,15 @@
   background-color: $neonGreen;
   border: black;
   color: black;
+  margin-top: -5rem;
 
   &:hover {
-    background-color: black;
+    background-color: darkgreen;
     color: $neonGreen;
   }
 
   &:active {
-    background-color: black;
-    color: $neonGreen;
+    background-color: darkgreen;
   }
 }
 
@@ -39,9 +46,10 @@
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
+  animation: spinGrow 3s linear forwards;
 }
 
-.work {
+.sectionHeading {
   border-top: 2px solid white;
 }
 
@@ -51,4 +59,171 @@
 
 .github {
   max-width: 2rem;
+}
+
+.fidelity {
+  color: $neonGreen;
+}
+
+.book-parent {
+  margin: 0px;
+  height: 600px;
+  display: grid;
+  place-items: center;
+}
+
+.book-group,
+.book {
+  aspect-ratio: 5 / 7;
+  width: 12.5rem;
+}
+
+.book {
+  border-radius: 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 1s cubic-bezier(0.05, 0.83, 0.38, 0.96);
+}
+
+.book1 {
+  transform: translateX(-15px) rotate(-8deg);
+  z-index: 1;
+  background: no-repeat center/90% url("../../../assets/images/enders.jpg");
+}
+
+.book2 {
+  transform: translateX(17px) rotate(10deg);
+  background: no-repeat center/90% url("../../../assets/images/foundations.jpg");
+  z-index: 2;
+}
+
+.book3 {
+  z-index: 3;
+  background: no-repeat center/90% url("../../../assets/images/GOT.webp");
+}
+
+.book4 {
+  transform: translate(-10px, -5px) rotate(-3deg);
+  background: no-repeat center/90% url("../../../assets/images/hitch.jpg");
+  z-index: 4;
+}
+
+.book5 {
+  transform: translate(10px, -10px) rotate(7deg);
+  background: no-repeat center/90% url("../../../assets/images/lotr.jpg");
+  z-index: 5;
+}
+
+.book-group > div {
+  cursor: pointer;
+}
+
+//make books float out when hovered over
+
+.book-group:hover > .book1Hover {
+  transform: translateX(-150px) rotate(-15deg);
+}
+
+.book-group:hover > .book2Hover {
+  transform: translateX(-75px) rotate(-7deg);
+}
+
+.book-group:hover > .book3Hover {
+  transform: translateY(-2px) rotate(1deg);
+}
+
+.book-group:hover > .book4Hover {
+  transform: translateX(75px) rotate(9deg);
+}
+
+.book-group:hover > .book5Hover {
+  transform: translate(150px, 10px) rotate(16deg);
+}
+
+//make books pop up on hover
+
+.book-group > .book1Hover:hover {
+  transform: translate(-150px, -30px);
+}
+
+.book-group > .book2Hover:hover {
+  transform: translate(-75px, -30px);
+}
+
+.book-group > .book3Hover:hover {
+  transform: translateY(-30px);
+}
+
+.book-group > .book4Hover:hover {
+  transform: translate(75px, -30px);
+}
+
+.book-group > .book5Hover:hover {
+  transform: translate(150px, -30px);
+}
+
+.book-group > .selected {
+  transform: translate(0px) rotate(0deg);
+  animation: slideIn 3s forwards;
+}
+
+.doubleClick {
+  margin-top: -5rem;
+}
+
+.info {
+  animation: fadeOut 400ms forwards;
+}
+
+.hideText {
+  opacity: 0;
+}
+
+.bookInfo {
+  animation: fadeIn 2.5s forwards;
+}
+
+// have selected book float to top
+
+@keyframes slideIn {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translate(0, -10%);
+  }
+}
+
+@keyframes spinGrow {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg) scale(1.5);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-100px);
+  }
 }
