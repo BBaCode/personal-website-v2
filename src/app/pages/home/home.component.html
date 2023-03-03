@@ -2,7 +2,7 @@
   <div class="container-xl text-center">
     <div class="row justify-content-center">
       <div class="col header">
-        <h1 id="header" class="header fw-light pt-5 pb-4 m-0">BRIAN BASSETT</h1>
+        <h1 id="header" class="header fw-light pt-3 pb-4 m-0">BRIAN BASSETT</h1>
         <h3 class="fw-bold fs-6">DEVELOPER, LEARNER, VOLLEYBALLER</h3>
       </div>
     </div>
@@ -25,21 +25,21 @@
         Outside Hitter on Kate's Team | Friend of Dogs
       </div>
     </div>
-    <div class="row d-flex justify-content-center">
+    <div class="row pb-5 d-flex justify-content-center">
       <div class="col-10 col-sm-6 text-center">
         Thanks for checking me out! Why don't you stay awhile?
       </div>
     </div>
   </div>
-  <div class="row py-4 d-flex justify-content-center work">
+  <!-- <div class="row py-4 d-flex justify-content-center work">
     <div class="col-10 col-sm-6 text-center fs-2">
       "I'm sick of following my dreams, man. I'm just going to ask where they're
-      going and gook up with 'em later."
+      going and hook up with 'em later."
     </div>
-  </div>
-  <div class="row pb-5 d-flex justify-content-center">
+  </div> -->
+  <!-- <div class="row pb-5 d-flex justify-content-center">
     <div class="col-10 col-sm-6 text-center">-MITCH HEDBERG-</div>
-  </div>
+  </div> -->
   <div class="container-fluid sectionHeading">
     <div class="container-xl pb-4">
       <div class="row">
@@ -172,7 +172,25 @@
       <div class="row">
         <div id="books" class="col fs-1 py-3 mt-3">My Favorite Books</div>
       </div>
-      <div class="row book-parent">
+      <div class="row row-cols-1 d-md-none d-flex justify-content-center">
+        <div class="col pb-3">
+          These are some of my favorite Science Fiction and Fantasy
+          books/series. I encourage you to try one!
+        </div>
+        <div class="col-auto">
+          <ul class="pb-4">
+            <li>Ender's Game by Orson Scott Card</li>
+            <li>Foundations by Isaac Asimov</li>
+            <li>Game of Thrones by George R.R. Martin</li>
+            <li>HitchHikers Guide to the Galaxy by Douglas Adams</li>
+            <li>Lord of The Rings by J.R.R. Tolkien</li>
+            <li>Three Body Problem by Cixin Liu</li>
+            <li>Night Angel or LightBringer Series by Brent Weeks</li>
+            <li>Harry Potter by JK Rowling (Everyone has to at some point)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row book-parent d-none d-md-grid">
         <div id="bookgroup" class="book-group">
           <div
             (click)="updateHighlightedBook(1)"
@@ -215,7 +233,7 @@
             class="book book5"
           ></div>
         </div>
-        <div class="row row-cols-1 text-center">
+        <div class="row row-cols-1 text-center d-none d-md-block">
           <div [class.info]="selectedBook != 0" class="col doubleClick">
             Double-click on a book above to learn more
           </div>
@@ -228,7 +246,7 @@
           </div>
         </div>
       </div>
-      <div class="row pb-5 d-flex justify-content-center">
+      <div class="row pb-5 d-flex justify-content-center d-none d-md-block">
         <div class="col-auto">
           <button (click)="resetBooks()" class="btn btn-primary">
             Reset Books
@@ -248,9 +266,16 @@
           <strong class="projectTitle">brianbsstt@gmail.com</strong>
         </div>
       </div>
-      <div class="row d-flex justify-content-center pt-3 pb-5">
-        <div class="col-auto">
+      <div class="row d-flex justify-content-center py-4">
+        <div class="col-10 col-sm-6 text-center">
           Or feel free to follow any of the links below
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center pb-5">
+        <div class="col-10 col-sm-6 text-center">
+          <button (click)="scrollToTop()" class="btn-primary px-2 py-1">
+            Back to Top
+          </button>
         </div>
       </div>
     </div>

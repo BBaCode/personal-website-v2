@@ -39,7 +39,8 @@ export class HomeComponent {
     this.highlightedBook = 0;
     this.selectedBook = 0;
   }
-}
 
-// when book is clicked, its highlighted
-// if book is highlighted and clicked again, its selected at which point, books should be dispersed
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+}

@@ -1,5 +1,9 @@
 @use "../../../styles.scss" as *;
 
+li {
+  list-style-type: georgian;
+}
+
 .container-fluid {
   padding: 0 !important;
 }
@@ -31,14 +35,10 @@
   border: black;
   color: black;
   margin-top: -5rem;
+  border-radius: 2px;
 
   &:hover {
-    background-color: darkgreen;
-    color: $neonGreen;
-  }
-
-  &:active {
-    background-color: darkgreen;
+    background-color: rgb(22, 114, 22);
   }
 }
 
